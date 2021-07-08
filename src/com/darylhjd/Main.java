@@ -1,13 +1,13 @@
 package com.darylhjd;
 
+import com.darylhjd.part2.BookReader;
+import com.darylhjd.part2.Checker;
+
 public class Main {
     public static void main(String[] args) {
-        Gift book = new Gift("Harry Potter and the Philosopher's Stone", 2);
-
-        System.out.println("Gift's name: " + book.getName());
-        System.out.println("Gift's weight: " + book.getWeight());
-
-        System.out.println("Gift: " + book);
+        System.out.println(Checker.timeOfDay("17:23:05"));
+        System.out.println(Checker.timeOfDay("abc"));
+        System.out.println(Checker.timeOfDay("33:33:33"));
     }
 }
 

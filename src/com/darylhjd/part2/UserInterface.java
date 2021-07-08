@@ -1,14 +1,14 @@
-package com.darylhjd;
+package com.darylhjd.part2;
 
 import java.util.Scanner;
 
 public class UserInterface {
-    private Scanner scanner;
     private TodoList list;
+    private Scanner scanner;
 
-    public UserInterface(TodoList list, Scanner scanner) {
+    public UserInterface(TodoList todolist, Scanner scanner) {
+        this.list = todolist;
         this.scanner = scanner;
-        this.list = list;
     }
 
     public void start() {
@@ -25,7 +25,6 @@ public class UserInterface {
                     this.list.print();
                     break;
                 case "remove":
-                    System.out.print("Which one to remove: ");
                     this.list.remove(Integer.parseInt(this.scanner.nextLine()));
                     break;
                 default:

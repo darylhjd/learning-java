@@ -1,4 +1,4 @@
-package com.darylhjd;
+package com.darylhjd.part1;
 
 public class Apartment {
     private int rooms;

@@ -1,4 +1,4 @@
-package com.darylhjd;
+package com.darylhjd.part1;
 
 import java.nio.file.Paths;
 import java.util.Scanner;
