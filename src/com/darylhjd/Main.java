@@ -1,13 +1,23 @@
 package com.darylhjd;
 
-import com.darylhjd.part2.BookReader;
-import com.darylhjd.part2.Checker;
+import com.darylhjd.part2.Education;
+import com.darylhjd.part2.EmployeesEdu;
+import com.darylhjd.part2.PersonEdu;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Checker.timeOfDay("17:23:05"));
-        System.out.println(Checker.timeOfDay("abc"));
-        System.out.println(Checker.timeOfDay("33:33:33"));
+        EmployeesEdu university = new EmployeesEdu();
+        university.add(new PersonEdu("Petrus", Education.PHD));
+        university.add(new PersonEdu("Arto", Education.HS));
+        university.add(new PersonEdu("Elina", Education.PHD));
+
+        university.print();
+
+        university.fire(Education.HS);
+
+        System.out.println("==");
+
+        university.print();
     }
 }
 
