@@ -1,21 +1,31 @@
 package com.darylhjd;
 
-import com.darylhjd.dictionary.SavableDictionary;
+import com.darylhjd.part2.Pipe;
 
 public class Main {
     public static void main(String[] args) {
-        SavableDictionary dictionary = new SavableDictionary();
-        dictionary.add("apina", "monkey");
-        dictionary.add("banaani", "banana");
-        dictionary.add("ohjelmointi", "programming");
-        dictionary.delete("apina");
-        dictionary.delete("banana");
+        int[] numbers = {3, -1, 8, 4};
 
-        System.out.println(dictionary.translate("apina"));
-        System.out.println(dictionary.translate("monkey"));
-        System.out.println(dictionary.translate("banana"));
-        System.out.println(dictionary.translate("banaani"));
-        System.out.println(dictionary.translate("ohjelmointi"));
+        System.out.println(sum(numbers, 0, 0, 0, 0));
+        System.out.println(sum(numbers, 0, 0, 0, 10));
+        System.out.println(sum(numbers, 0, 1, 0, 10));
+        System.out.println(sum(numbers, 0, 1, -10, 10));
+        System.out.println(sum(numbers, -1, 999, -10, 10));
+    }
+
+    public static int sum(int[] array, int fromWhere, int toWhere, int smallest, int largest) {
+        if (fromWhere < 0) {
+            fromWhere = 0;
+        }
+        if (toWhere > array.length) {
+            toWhere = array.length;
+        }
+
+        int sum = 0;
+        for (int i = fromWhere; i < toWhere; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
 }
 
